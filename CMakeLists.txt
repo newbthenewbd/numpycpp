@@ -29,7 +29,7 @@ add_library(demo SHARED demo_boost_numpy.cpp)
 message(STATUS "found Boost_PYTHON_LIBRARY:      ${Boost_PYTHON_LIBRARY}")
 message(STATUS "found Boost_LIBRARIES:       ${Boost_LIBRARIES}")
 
-target_link_libraries(demo boost_python boost_numpy)
+target_link_libraries(demo ${Boost_LIBRARIES})
 
 add_custom_command(TARGET demo POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E create_symlink ${CMAKE_SOURCE_DIR}/demo.py ${CMAKE_BINARY_DIR}/demo.py)
