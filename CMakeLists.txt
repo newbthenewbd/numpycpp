@@ -24,10 +24,10 @@ message(STATUS "NumPy include dirs  = ${PYTHON_NUMPY_INCLUDE_DIR}")
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 
-include_directories(${PYTHON_INCLUDE_DIRS} ${PYTHON_NUMPY_INCLUDE_DIR})
 include_directories(.)
 
 if(Boost_VERSION LESS 106500)
+  include_directories(${PYTHON_INCLUDE_DIRS} ${PYTHON_NUMPY_INCLUDE_DIR})
   add_library(numpycpp STATIC numpy.cpp)
   add_library(demo SHARED demo.cpp)
 else()
