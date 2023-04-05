@@ -19,6 +19,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 
 include_directories(.)
 
+include_directories(${PYTHON_INCLUDE_DIRS})
 add_library(demo SHARED demo_boost_numpy.cpp)
 
 
