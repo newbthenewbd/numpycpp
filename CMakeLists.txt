@@ -5,7 +5,7 @@ project(numpycpp)
 # according to recommendation in https://cmake.org/Wiki/CMake:How_To_Find_Libraries
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/.cmake/modules/")
 
-set(Python_ADDITIONAL_VERSIONS 2.7)
+set(Python_ADDITIONAL_VERSIONS 3)
 find_package(PythonInterp REQUIRED)
 find_package(PythonLibs REQUIRED)
 find_package(Boost REQUIRED COMPONENTS "python")
